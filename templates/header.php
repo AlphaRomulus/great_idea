@@ -12,9 +12,10 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
-  
-  <?php include('css/style.html');?>
-
+  <style>
+  <?php include('css/reset.html');?>
+  <?php include('css/'.$page.'.html');?>
+  </style>
 </head>
   <body>
 	<header>

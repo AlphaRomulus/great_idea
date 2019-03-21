@@ -1,17 +1,22 @@
 <?php
+
+
+if (isset($_GET['page']) && count($_GET) == 1){
+	$page = $_GET['page'];
+}else{
+	$page = 'home';
+}
+
+
 //HEAD
 include 'templates/header.php';
 
 //BODY
-if (isset($_GET['page']) && count($_GET) == 1){
-	echo '<main id="page-'.$_GET['page'].'">';
-	include 'templates/pages/'.$_GET['page'].'.php';
-	echo '</main>';
-}else{
-	echo '<main id="page-'.$_GET['page'].'">';
-	include 'templates/pages/home.php';
-	echo '</main>';
-}
+echo '<main id="page-'.$page.'">';
+include 'templates/pages/'.$page.'.php';
+echo '</main>';
+
 //Footer
 include 'templates/footer.php';
+
 ?>
