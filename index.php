@@ -1,12 +1,9 @@
 <?php
-
-
 if (isset($_GET['page']) && count($_GET) == 1){
 	$page = $_GET['page'];
 }else{
 	$page = 'home';
 }
-
 
 //HEAD
 include 'templates/header.php';
